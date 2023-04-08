@@ -9,12 +9,13 @@ public class Gun : MonoBehaviour
     private StarterAssetsInputs _input;
     // Start is called before the first frame update
     [SerializeField]
-    private GameObject bulletPrefab;
+    public GameObject bulletPrefab;
 
     [SerializeField]
-    private GameObject bulletPoint;
+    public GameObject bulletPoint;
 
-    private float bulletSpeed = 600;
+
+    float bulletSpeed = 1500;
     void Start()
     {
         _input = transform.root.GetComponent<StarterAssetsInputs>();
@@ -27,14 +28,19 @@ public class Gun : MonoBehaviour
         {
             Shoot();
             _input.shoot = false;
+
         }
     }
 
     void Shoot()
     {
-        Debug.Log("Shoot");
-        GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, bulletPoint.transform.position, transform.rotation) as GameObject;
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
         Destroy(bullet, 1);
+       
+
     }
+
+
+
 }
