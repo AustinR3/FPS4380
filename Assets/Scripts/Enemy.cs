@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
 public Transform[] points;
 int current;
 public float speed;
-  
+
+
 
 void Start() 
 {
