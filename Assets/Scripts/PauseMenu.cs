@@ -31,10 +31,10 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
-        if(Input.GetKeyDown(KeyCode.M))
-        {
-          GoToMainMenu();
-        }
+        // if(Input.GetKeyDown(KeyCode.M))
+        // {
+        //   GoToMainMenu();
+        // }
     }
 
 
@@ -52,11 +52,11 @@ Time.timeScale = 1f;
 isPaused = false;
 }
 
-public void GoToMainMenu()
-{
+// public void GoToMainMenu()
+// {
    
-   SceneManager.LoadScene("MainMenu");
-}
+//    SceneManager.LoadScene("MainMenu");
+// }
 
 
 

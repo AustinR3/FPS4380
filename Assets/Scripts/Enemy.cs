@@ -13,6 +13,7 @@ public float speed;
 
 
 
+
 void Start() 
 {
     
@@ -34,6 +35,8 @@ if(transform.position != points[current].position)
         current = (current + 1) % points.Length;
 
 }
+
+
 
 
 
