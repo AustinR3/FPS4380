@@ -119,7 +119,10 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
+			if(!PauseMenu.isPaused)
+			{
 			CameraRotation();
+			}
 		}
 
 		private void GroundedCheck()

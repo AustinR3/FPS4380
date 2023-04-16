@@ -24,12 +24,16 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //if(!PauseMenu.isPaused)
+		//{
         if(_input.shoot)
         {
             Shoot();
             _input.shoot = false;
 
         }
+        //}
     }
 
     void Shoot()
